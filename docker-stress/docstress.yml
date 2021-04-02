@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dockstress
+  namespace: default
+spec:
+  containers:
+  - image: prasenforu/dockstress
+    imagePullPolicy: IfNotPresent
+    name: dockstress
+  restartPolicy: Always

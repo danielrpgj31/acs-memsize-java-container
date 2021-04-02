@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: memkill
+  namespace: default
+spec:
+  containers:
+  - image: prasenforu/memoryeater
+    command:
+      - sleep
+      - "100"
+    imagePullPolicy: IfNotPresent
+    name: memkill
+  restartPolicy: Always
